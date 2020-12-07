@@ -1,6 +1,5 @@
 package com.example.mymovies
 
-import java.net.URL
 
 data class MovieData (var title : String , var year : String , var imdb_id : String )
 

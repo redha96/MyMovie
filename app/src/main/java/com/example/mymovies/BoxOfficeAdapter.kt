@@ -22,13 +22,15 @@ class BoxOfficeAdapter(val moviesList: MutableList<Movie>?) : RecyclerView.Adapt
 
     override fun onBindViewHolder(holder: BoxOfficeViewHolder, position: Int) {
 
-        val movie : Movie = moviesList!![position]
-        var movieSortingPosition = position+1
-        holder.view.position_text_view.setText("$movieSortingPosition")
-        holder!!.view.movie_title_textview.setText(movie.title)
-        holder!!.view.movie_year_textview.setText(movie.year)
-        Glide.with(holder.view.movie_image_view).load(movie.movieImage.Poster.toString()).into(holder.view.movie_image_view)
-
+        if(holder != null) {
+            val movie : Movie = moviesList!![position]
+            var movieSortingPosition = position+1
+            holder.view.position_text_view.setText("$movieSortingPosition")
+            holder!!.view.movie_title_textview.setText(movie.title)
+            holder!!.view.movie_year_textview.setText(movie.year)
+            Glide.with(holder.view.movie_image_view).load(movie.movieImage.Poster).into(holder.view.movie_image_view)
+        }
+        
 
 
 

@@ -21,6 +21,7 @@
         android:testOnly="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true" >
+        <activity android:name="com.example.mymovies.RecentAddedMovies" />
         <activity android:name="com.example.mymovies.BoxOffice" />
         <activity android:name="com.example.mymovies.MainActivity" >
             <intent-filter>

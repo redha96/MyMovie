@@ -72,7 +72,7 @@ class BoxOffice : AppCompatActivity() {
         })
     }
 
-    fun getMoviesImages(dataOfAllMovies: DataOfAllMovies){
+     fun getMoviesImages(dataOfAllMovies: DataOfAllMovies){
         val numOfMovies = dataOfAllMovies.movie_results.count() -1
 
         for (i in 0 .. numOfMovies){
@@ -120,19 +120,12 @@ class BoxOffice : AppCompatActivity() {
 //                    moviesList!!.add(currentMovie)
                     addCurrentMovieToTheList(currentMovie)
 
-
-
                 }
-
-
-
-
 
             })
 
         }
 //
-
         Thread(Runnable {
             this@BoxOffice.runOnUiThread(java.lang.Runnable {
 

@@ -25,7 +25,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        
+        get_recent_added_movies_btn.setOnClickListener{
+            val intent = Intent(this, RecentAddedMovies::class.java)
+            startActivity(intent)
+        }
         //fetchData()
     }
 
